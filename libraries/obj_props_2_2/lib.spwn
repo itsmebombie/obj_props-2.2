@@ -1,0 +1,14 @@
+// object key
+ok = (id: @number, pat: @pattern | @type_indicator, name: @string) {
+    return @object_key::{id, pattern: pat, name}
+}
+
+return {
+    SCALE_X: ok(128, @number, "SCALE_X"),
+    SCALE_Y: ok(129, @number, "SCALE_Y"),
+    PERSPECTIVE_X: ok(131, @number, "PERSPECTIVE_X"),
+    PERSPECTIVE_Y: ok(132, @number, "PERSPECTIVE_Y"),
+    // this doesnt work well with spwn 0.8, it thinks its a float not an array
+    P_GROUPS: ok(274, @number, "PERSPECTIVE_Y"),
+
+}
