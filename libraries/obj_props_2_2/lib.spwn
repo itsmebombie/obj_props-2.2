@@ -2,13 +2,58 @@
 ok = (id: @number, pat: @pattern | @type_indicator, name: @string) {
     return @object_key::{id, pattern: pat, name}
 }
-
+// id 2067 is scale trigger
 return {
     SCALE_X: ok(128, @number, "SCALE_X"),
     SCALE_Y: ok(129, @number, "SCALE_Y"),
     PERSPECTIVE_X: ok(131, @number, "PERSPECTIVE_X"),
     PERSPECTIVE_Y: ok(132, @number, "PERSPECTIVE_Y"),
     // this doesnt work well with spwn 0.8, it thinks its a float not an array
-    P_GROUPS: ok(274, @number, "PERSPECTIVE_Y"),
+    P_GROUPS: ok(274, @array, "P_GROUPS"),
+    FOLLOW_CAMERA_X: ok(141, @bool, "FOLLOW_CAMERA_X"),
+    FOLLOW_CAMERA_Y: ok(142, @bool, "FOLLOW_CAMERA_Y"),
+    FOLLOW_CAMERA_X_MOD: ok(143, @number, "FOLLOW_CAMERA_X_MOD"),
+    FOLLOW_CAMERA_Y_MOD: ok(144, @number, "FOLLOW_CAMERA_Y_MOD"),
+    FOLLOW_P1: ok(215, @bool, "FOLLOW_P1"),
+    FOLLOW_P2: ok(216, @bool, "FOLLOW_P2"),
+    SCALE_X_BY: ok(150, @number, "SCALE_X_BY"),
+    SCALE_Y_BY: ok(151, @number, "SCALE_Y_BY"),
+    ADV_RAND_STRING: ok(152, @array, "ADV_RAND_STRING")
+    DIV_BY_X: ok(153, @bool, "DIV_BY_X"),
+    DIV_BY_Y: ok(154, @bool, "DIV_BY_Y"),
+    ONLY_MOVE: ok(133, @bool, "ONLY_MOVE"),
+    // 0: both, 1: p1 only, 2: p2 only
+    PLAYER_ONLY: ok(198, @number, "PLAYER_ONLY"),
+    OVERRIDE_COUNT: ok(139, @bool, "OVERRIDE_COUNT"),
+    TARGET_2: ok(71, @group, "GROUP_2"),
+    CHANCE: ok(10, @number, "CHANCE"),
+    CAMERA_ZOOM: ok(109, @number, "CAMERA_ZOOM"),
+    FOLLOW_GROUP: ok(212, @group, "FOLLOW_GROUP")
+    FOLLOW_EASING: ok(213, @number, "FOLLOW_EASING"),
+    CAMERA_EDGE: ok(164, @number, "CAMERA_EDGE"),
+    CHANGE_CHANNEL: ok(171, @bool, "CHANGE_CHANNEL"),
+    KEEP_VELOCITY: ok(169, @bool, "KEEP_VELOCITY"),
+    REVERSED: ok(118, @bool, "REVERSED")
+    SONG_START: ok(119, @number, "SONG_START"),
+    TIME_MOD: ok(120, @number, "TIME_MOD"),
+    FREE_MODE: ok(111, @bool, "FREE_MODE"),
+    EDIT_FREE_CAM_SETTINGS: ok(112, @number, "EDIT_FREE_CAM_SETTINGS"),
+    FREE_CAM_EASING: ok(113, @number, "FREE_CAM_EASING"),
+    FREE_CAM_PADDING: ok(114, @number, "FREE_CAM_PADDING"),
+    DISABLE_GRID_SNAP: ok(370, @bool, "DISABLE_GRID_SNAP"),
 
+    // these 8 values are `0 = default, -1 = false, 1 = true`
+    STREAK_ADDITIVE: ok(159, @number, "STREAK_ADDITIVE"),
+    UNLINK_DUAL_GRAVITY: ok(160, @number, "UNLINK_DUAL_GRAVITY"),
+    HIDE_GROUND: ok(161, @number, "HIDE_GROUND"),
+    HIDE_MG: ok(195, @number, "HIDE_MG"),
+    HIDE_P1: ok(162, @number, "HIDE_P1"),
+    HIDE_P2: ok(163, @number, "HIDE_P2"),
+    DISABLE_CONTROLS_P1: ok(165, @number, "DISABLE_CONTROLS_P1"),
+    DISABLE_CONTROLS_P1: ok(199, @number, "DISABLE_CONTROLS_P2"),
+
+    GRAVITY: ok(148, @number, "GRAVITY"),
+    PLAYER_1: ok(138, @number, "PLAYER_1"),
+    PLAYER_2: ok(200, @number, "PLAYER_2"),
+    _PT: ok(201, @number, "_PT"), // wtf is this
 }
