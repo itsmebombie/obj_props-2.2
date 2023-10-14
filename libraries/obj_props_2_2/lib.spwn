@@ -56,4 +56,14 @@ return {
     PLAYER_1: ok(138, @number, "PLAYER_1"),
     PLAYER_2: ok(200, @number, "PLAYER_2"),
     _PT: ok(201, @number, "_PT"), // wtf is this
+    
+    // gradient stuff here
+    GR_LAYER: ok(202, @number, "GR_LAYER")
+    GR_BL: ok(203, @group, "GR_BL"),
+    GR_BR: ok(204, @group, "GR_BR"),
+    GR_TL: ok(205, @group, "GR_TL"),
+    GR_TR: ok(206, @group, "GR_TR"),
+    GR_VERTEX_MODE: ok(207, @bool, "GR_VERTEX_MODE")
+    GR_DISABLE: ok(208, @bool, "GR_DISABLE"),
+    GR_ID: ok(209, @number, "GR_ID"),
 }
