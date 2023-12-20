@@ -3,6 +3,10 @@ ok = (id: @number, pat: @pattern | @type_indicator, name: @string) {
     return @object_key::{id, pattern: pat, name}
 }
 // id 2067 is scale trigger
+// id 2903 is gradient trigger
+// id 3600 is end trigger
+// id 1934 is song trigger
+// id 3604 is event trigger
 return {
     SCALE_X: ok(128, @number, "SCALE_X"),
     SCALE_Y: ok(129, @number, "SCALE_Y"),
@@ -18,7 +22,7 @@ return {
     FOLLOW_P2: ok(216, @bool, "FOLLOW_P2"),
     SCALE_X_BY: ok(150, @number, "SCALE_X_BY"),
     SCALE_Y_BY: ok(151, @number, "SCALE_Y_BY"),
-    ADV_RAND_STRING: ok(152, @array, "ADV_RAND_STRING")
+    ADV_RAND_STRING: ok(152, @array, "ADV_RAND_STRING"),
     DIV_BY_X: ok(153, @bool, "DIV_BY_X"),
     DIV_BY_Y: ok(154, @bool, "DIV_BY_Y"),
     ONLY_MOVE: ok(133, @bool, "ONLY_MOVE"),
@@ -28,13 +32,12 @@ return {
     TARGET_2: ok(71, @group, "GROUP_2"),
     CHANCE: ok(10, @number, "CHANCE"),
     CAMERA_ZOOM: ok(109, @number, "CAMERA_ZOOM"),
-    FOLLOW_GROUP: ok(212, @group, "FOLLOW_GROUP")
+    FOLLOW_GROUP: ok(212, @group, "FOLLOW_GROUP"),
     FOLLOW_EASING: ok(213, @number, "FOLLOW_EASING"),
     CAMERA_EDGE: ok(164, @number, "CAMERA_EDGE"),
     CHANGE_CHANNEL: ok(171, @bool, "CHANGE_CHANNEL"),
     KEEP_VELOCITY: ok(169, @bool, "KEEP_VELOCITY"),
-    REVERSED: ok(118, @bool, "REVERSED")
-    SONG_START: ok(119, @number, "SONG_START"),
+    REVERSED: ok(118, @bool, "REVERSED"),
     TIME_MOD: ok(120, @number, "TIME_MOD"),
     FREE_MODE: ok(111, @bool, "FREE_MODE"),
     EDIT_FREE_CAM_SETTINGS: ok(112, @number, "EDIT_FREE_CAM_SETTINGS"),
@@ -50,10 +53,45 @@ return {
     HIDE_P1: ok(162, @number, "HIDE_P1"),
     HIDE_P2: ok(163, @number, "HIDE_P2"),
     DISABLE_CONTROLS_P1: ok(165, @number, "DISABLE_CONTROLS_P1"),
-    DISABLE_CONTROLS_P1: ok(199, @number, "DISABLE_CONTROLS_P2"),
+    DISABLE_CONTROLS_P2: ok(199, @number, "DISABLE_CONTROLS_P2"),
 
     GRAVITY: ok(148, @number, "GRAVITY"),
     PLAYER_1: ok(138, @number, "PLAYER_1"),
     PLAYER_2: ok(200, @number, "PLAYER_2"),
     _PT: ok(201, @number, "_PT"), // wtf is this
+    
+    // gradient stuff here
+    GR_LAYER: ok(202, @number, "GR_LAYER"),
+    GR_BL: ok(203, @group, "GR_BL"),
+    GR_BR: ok(204, @group, "GR_BR"),
+    GR_TL: ok(205, @group, "GR_TL"),
+    GR_TR: ok(206, @group, "GR_TR"),
+    GR_VERTEX_MODE: ok(207, @bool, "GR_VERTEX_MODE"),
+    GR_DISABLE: ok(208, @bool, "GR_DISABLE"),
+    GR_ID: ok(209, @number, "GR_ID"),
+    GR_PREV_OPACITY: ok(456, @number, "GR_PREV_OPACITY"),
+
+    // end trigger
+    END_NO_SFX: ok(461, @bool, "END_NO_SFX"),
+    END_NO_EFFECTS: ok(487, @bool, "END_NO_EFFECTS"),
+    END_INSTANT: ok(460, @bool, "END_INSTANT"),
+
+    // song trigger
+    SONG_ID: ok(392, @number, "SONG_ID"),
+    SONG_VOLUME: ok(404, @number, "SONG_VOLUME"),
+    SONG_SPEED: ok(406, @number, "SONG_SPEED"),
+    SONG_START: ok(408, @number, "SONG_START"),
+    SONG_FADE_IN: ok(409, @number, "SONG_FADE_IN"),
+    SONG_END: ok(410, @number, "SONG_END"),
+    SONG_FADE_OUT: ok(411, @number, "SONG_FADE_OUT"),
+    SONG_CHANNEL: ok(432, @number, "SONG_CHANNEL"),
+    SONG_LOOP: ok(413, @bool, "SONG_LOOP"),
+    SONG_PREP: ok(399, @bool, "SONG_PREP"),
+    SONG_LOAD_PREP: ok(400, @bool, "SONG_LOAD_PREP"),
+
+    // event trigger
+    EVENT_EXTRA_ID: ok(447, @number, "EVENT_EXTRA_ID"),
+    EVENT_EXTRA_ID2: ok(525, @number, "EVENT_EXTRA_ID2"),
+    // "Arrays in object parameters can only contain groups" 💀
+    EVENT_LIST: ok(430, @array|@string|@number, "EVENT_LIST"),
 }
