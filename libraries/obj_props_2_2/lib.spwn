@@ -44,6 +44,7 @@ return {
     FREE_CAM_EASING: ok(113, @number, "FREE_CAM_EASING"),
     FREE_CAM_PADDING: ok(114, @number, "FREE_CAM_PADDING"),
     DISABLE_GRID_SNAP: ok(370, @bool, "DISABLE_GRID_SNAP"),
+    HIDE_OBJECT: ok(135, @bool, "HIDE_OBJECT"),
 
     // these 8 values are `0 = default, -1 = false, 1 = true`
     STREAK_ADDITIVE: ok(159, @number, "STREAK_ADDITIVE"),
