@@ -81,9 +81,9 @@ return {
 
     // song+sfx trigger
     SONG_SFX_ID: ok(392, @number, "SONG_SFX_ID"),
-    SONG_SFX_VOLUME: ok(404, @number, "SONG_SFX_VOLUME"),
-    SFX_PITCH: ok(405, @number, "SFX_PITCH")
-    SONG_SFX_SPEED: ok(406, @number, "SONG_SFX_SPEED"),
+    SONG_SFX_SPEED: ok(404, @number, "SONG_SFX_SPEED"),
+    SFX_PITCH: ok(405, @number, "SFX_PITCH"),
+    SONG_SFX_VOLUME: ok(406, @number, "SONG_SFX_VOLUME"),
     SONG_SFX_START: ok(408, @number, "SONG_SFX_START"),
     SONG_SFX_FADE_IN: ok(409, @number, "SONG_SFX_FADE_IN"),
     SONG_SFX_END: ok(410, @number, "SONG_SFX_END"),
