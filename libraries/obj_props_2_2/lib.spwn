@@ -82,6 +82,7 @@ return {
     // song+sfx trigger
     SONG_SFX_ID: ok(392, @number, "SONG_SFX_ID"),
     SONG_SFX_VOLUME: ok(404, @number, "SONG_SFX_VOLUME"),
+    SFX_PITCH: ok(405, @number, "SFX_PITCH")
     SONG_SFX_SPEED: ok(406, @number, "SONG_SFX_SPEED"),
     SONG_SFX_START: ok(408, @number, "SONG_SFX_START"),
     SONG_SFX_FADE_IN: ok(409, @number, "SONG_SFX_FADE_IN"),
@@ -91,6 +92,8 @@ return {
     SONG_SFX_LOOP: ok(413, @bool, "SONG_SFX_LOOP"),
     SONG_PREP: ok(399, @bool, "SONG_PREP"),
     SONG_LOAD_PREP: ok(400, @bool, "SONG_LOAD_PREP"),
+    SONG_SFX_VOL_NEAR: ok(421, @number, "SONG_SFX_VOL_NEAR"),
+    SONG_SFX_VOL_MED: ok(422, @number, "SONG_SFX_VOL_MED"),
 
     // event trigger
     EVENT_EXTRA_ID: ok(447, @number, "EVENT_EXTRA_ID"),
