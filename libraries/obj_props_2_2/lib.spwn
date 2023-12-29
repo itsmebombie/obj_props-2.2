@@ -6,6 +6,8 @@ ok = (id: @number, pat: @pattern | @type_indicator, name: @string) {
 // id 2903 is gradient trigger
 // id 3600 is end trigger
 // id 1934 is song trigger
+// id 3602 is sfx trigger
+// id 3603 is edit sfx trigger
 // id 3604 is event trigger
 return {
     SCALE_X: ok(128, @number, "SCALE_X"),
@@ -77,16 +79,16 @@ return {
     END_NO_EFFECTS: ok(487, @bool, "END_NO_EFFECTS"),
     END_INSTANT: ok(460, @bool, "END_INSTANT"),
 
-    // song trigger
-    SONG_ID: ok(392, @number, "SONG_ID"),
-    SONG_VOLUME: ok(404, @number, "SONG_VOLUME"),
-    SONG_SPEED: ok(406, @number, "SONG_SPEED"),
-    SONG_START: ok(408, @number, "SONG_START"),
-    SONG_FADE_IN: ok(409, @number, "SONG_FADE_IN"),
-    SONG_END: ok(410, @number, "SONG_END"),
-    SONG_FADE_OUT: ok(411, @number, "SONG_FADE_OUT"),
+    // song+sfx trigger
+    SONG_SFX_ID: ok(392, @number, "SONG_SFX_ID"),
+    SONG_SFX_VOLUME: ok(404, @number, "SONG_SFX_VOLUME"),
+    SONG_SFX_SPEED: ok(406, @number, "SONG_SFX_SPEED"),
+    SONG_SFX_START: ok(408, @number, "SONG_SFX_START"),
+    SONG_SFX_FADE_IN: ok(409, @number, "SONG_SFX_FADE_IN"),
+    SONG_SFX_END: ok(410, @number, "SONG_SFX_END"),
+    SONG_SFX_FADE_OUT: ok(411, @number, "SONG_SFX_FADE_OUT"),
     SONG_CHANNEL: ok(432, @number, "SONG_CHANNEL"),
-    SONG_LOOP: ok(413, @bool, "SONG_LOOP"),
+    SONG_SFX_LOOP: ok(413, @bool, "SONG_SFX_LOOP"),
     SONG_PREP: ok(399, @bool, "SONG_PREP"),
     SONG_LOAD_PREP: ok(400, @bool, "SONG_LOAD_PREP"),
 
